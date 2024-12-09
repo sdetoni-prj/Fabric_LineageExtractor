@@ -1,4 +1,4 @@
-Automatic Lineage Extraction from MS Fabric
+# Automatic Lineage Extraction from MS Fabric
 
 This is an Initial code implementation for automatic metadata and lineage extraction from MS Fabric.
 
