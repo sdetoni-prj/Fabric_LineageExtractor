@@ -17,12 +17,14 @@ The second screenshot shows colum-level lineage display of Fabric/PowerBI report
 
 The lineage information is also formatted in the form of DataFrames, thus allowing easy reuse, for example for regulatory purposes (legal reporting on data analysis) and impact analysis ("what business data is impacted if I change one step of the data transformation process?").
 
+
+
 Credits:
 
 version 1: 
 
-The Table and Colums information is extracted via SQL Queries that can be found in the MS documentation [here](https://learn.microsoft.com/en-us/sql/relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq?view=fabric#_FAQ31) 
+The Table and Colums information is extracted via SQL queries whose source can be found in the MS documentation [here](https://learn.microsoft.com/en-us/sql/relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq?view=fabric#_FAQ31) 
 
-Report metadata and Pipeline json structure are extracted using Semantic Link Labs library by Michael Kovalsky et al. (https://github.com/microsoft/semantic-link-labs)
+Report sources metadata Pipeline json structures are extracted using Semantic Link Labs library by Michael Kovalsky et al. (https://github.com/microsoft/semantic-link-labs)
 
-Upload to MS Purview are performed using examples of Pyapacheatlas by Will Johnson et al. (https://github.com/wjohnson/pyapacheatlas)
+Upload to MS Purview is performed using examples of Pyapacheatlas by Will Johnson et al. (https://github.com/wjohnson/pyapacheatlas)
