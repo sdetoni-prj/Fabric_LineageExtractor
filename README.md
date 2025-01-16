@@ -23,7 +23,7 @@ Credits:
 
 version 1: 
 
-The Table and Colums information is extracted via SQL queries whose source can be found in the MS documentation [here](https://learn.microsoft.com/en-us/sql/relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq?view=fabric#_FAQ31) 
+The Table and Colums metadata are extracted via SQL queries whose source can be found in the MS documentation [here](https://learn.microsoft.com/en-us/sql/relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq?view=fabric#_FAQ31) 
 
 Report sources metadata Pipeline json structures are extracted using Semantic Link Labs library by Michael Kovalsky et al. (https://github.com/microsoft/semantic-link-labs)
 
