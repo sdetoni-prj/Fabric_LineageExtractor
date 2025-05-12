@@ -1,8 +1,6 @@
 # Automatic Column-level Lineage Extraction from MS Fabric
 
 This is an Initial code implementation for automatic metadata and column-level lineage extraction from MS Fabric.
-
-**Please use the [Releases](https://github.com/sdetoni-prj/Fabric_LineageExtractor/releases) section link for dowloading the notebook source code (on the right side of this page)**
  
 The code extracts metadata of tables, table columns, PBIR reports and pipeline Copy activity mappings from MS Fabric.
 It then uploads all metadata found to MS Purview and creates a graphical attribute-level lineage.
