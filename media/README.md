@@ -99,20 +99,15 @@ To use the source code, you need to:
 
     - As at least a Data Source Admin within the MS Purview collections where you want to upload the metadata and lineage. Of course you can add it at the Root Domain level.
 
-4. Configure the EntraID Security Group you created:
-    
-    - As a specific “enabled” Security Group in the  following settings of the PowerBI/Fabric Admin Portal (search for “API” in the top-right search textbox to easily find all the relevant settings):
+4. Configure the EntraID Security Group you created as a specific “enabled” Security Group in the  following settings of the PowerBI/Fabric Admin Portal (search for “API” in the top-right search textbox to easily find all the relevant settings):
 	
     ![Admin portal security group](https://github.com/sdetoni-prj/Fabric_LineageExtractor/blob/main/media/admin_portal1.png)
 
-    - Within “Developer Settings”, the “Service principals can use Fabric APIs” setting (see screenshots)
+        - in  “Service principals can use Fabric APIs” within “Developer Settings” (see screenshots)
     
-    - Within “Admin API settings” the settings
-      
-            1. "Service principals can access read-only admin APIs"
-            2. "Enhance admin APIs responses with detailed metadata"
+        - in "Service principals can access read-only admin APIs" and "Enhance admin APIs responses with detailed metadata" within “Admin API settings”
 
-    ![Admin portal security group](https://github.com/sdetoni-prj/Fabric_LineageExtractor/blob/main/media/admin_portal2.png)
+![Admin portal security group](https://github.com/sdetoni-prj/Fabric_LineageExtractor/blob/main/media/admin_portal2.png)
 
 <br />
 
