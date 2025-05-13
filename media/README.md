@@ -1,4 +1,7 @@
 # Automatic column-level Lineage Extraction from MS Fabric
+
+<br />
+
 This is an initial code implementation for automatic metadata and column-level lineage extraction from MS Fabric.
 
 The notebook code provided in this  repo extracts from MS Fabric:
@@ -30,12 +33,15 @@ In more detail, the provided notebook code accomplishes the following four tasks
 
 4. it eventually uploads all metadata into MS Purview Data Governance, and creates lineage links with column mappings for the discovered artifacts above
 
+<br />
 
 # Some output examples
 
 The first screenshot shows an example of the resulting column-level lineage display of Copy DataPipelines
 
 The second screenshot shows column-level lineage display of Fabric/PowerBI reports in PBIR format.
+
+<br />
 
 # Quickstart: How to run the code
 
@@ -52,7 +58,8 @@ Configure the second cell of the notebook with the following values (you can ref
 - **client_id** the Service Principal id that you want to use to extract metadata from Fabric
 
 - **clientid4purview** the Service Principal that you want to use to upload metadata int MS Purview DG (it can be the same Service Principal as the Fabric one, as in the screenshot above, or a different one, in any case provide a value for this parameter )
-- client_secret the secret for the Service Principal that you want to use to extract metadata from Fabric. Use this field only for test/evaluation of this source code, NEVER embed secrets in code for production.
+
+- **client_secret** the secret for the Service Principal that you want to use to extract metadata from Fabric. Use this field only for test/evaluation of this source code, NEVER embed secrets in code for production.
 
 - **clientsecret4purview** the secret for the Service Principal that you want to use to upload metadata and lineage into Purview DataGovernance. Use this field only for test/evaluation of this source code, NEVER embed secrets in code for production. (it can be the same Service Principal as the Fabric one, as in the screenshot above, or a different one, in any case provide a value for this parameter )
 
@@ -69,7 +76,7 @@ e.g. the SQL queries used to extract table and column metadata can be run from a
 
 <br /> 
 
-**IMPORTANT NOTE:** to extract table and column metadata for data sources of PowerBI reports, the reports must be saved/imported into Fabric using the new PBIR format, which can be enabled in PowerBI Desktop as explained here
+**IMPORTANT NOTE:** to extract table and column metadata for data sources of PowerBI reports, the reports must be saved/imported into Fabric using the new PBIP/PBIR format, which can be enabled in PowerBI Desktop as [explained here](https://learn.microsoft.com/en-us/power-bi/developer/embedded/projects-enhanced-report-format)
 
 # Prerequisites and Fabric configuration
 
@@ -77,11 +84,11 @@ e.g. the SQL queries used to extract table and column metadata can be run from a
 
 To use the source code, you need to:
 
-1. Create an Azure Service Principal in MS Entra ID (i.e register a single tenant Enterprise Application) following instructions in this Quickstart. You do not need to add a redirect URI, but you need to add a Client Secret. Take note of the Tenant ID, the Service Principal Client ID and the Client Secret. Of course, you can reuse a Service Principal you already have. The source code provided allows you to use two different Service Principals, one for extracting metadata and lineage from Fabric, and a second one for uploading them into Purview. Using two Service principals may come useful when MS Purview and MS Fabric are in different EntraID Tenants.
+1. Create an Azure Service Principal in MS Entra ID (i.e register a single tenant Enterprise Application) following instructions in [this Quickstart](https://learn.microsoft.com/en-us/entra/identity-platform/quickstart-register-app). You do not need to add a redirect URI, but you need to [add a Client Secret](https://learn.microsoft.com/en-us/entra/identity-platform/how-to-add-credentials?tabs=client-secret#add-a-credential-to-your-application). Take note of the Tenant ID, the Service Principal Client ID and the Client Secret. Of course, you can reuse a Service Principal you already have. The source code provided allows you to use two different Service Principals, one for extracting metadata and lineage from Fabric, and a second one for uploading them into Purview. Using two Service principals may come useful when MS Purview and MS Fabric are in different EntraID Tenants.
 
     **IMPORTANT NOTE:** it is NOT advisable to embed the Client Secret within source code. The source code in this repository uses such a practice for simplicity and test/development purposes, but it is strongly recommended to store the Client Secret in an Azure Key Vault for production, or use more sophisticated practices for keeping it safely.
 
-2. Add the Service principal you created as a member to an MS Entra ID Security Group  as described here.
+2. Add the Service principal you created as a member to an MS Entra ID Security Group  as described [here.](https://learn.microsoft.com/en-us/entra/fundamentals/how-to-manage-groups#create-a-basic-group-and-add-members)
 
 3. Configure the Service Principal(s) or the Security Group you created:
 
@@ -104,6 +111,6 @@ To use the source code, you need to:
 <br />
 Version 1:
 
-The Table and Colums metadata are extracted via SQL queries whose source can be found in the MS documentation here
-- Report sources metadata Pipeline json structures are extracted using Semantic Link Labs library by Michael Kovalsky et al. (https://github.com/microsoft/semantic-link-labs)
-- Upload to MS Purview is performed using examples of Pyapacheatlas by Will Johnson et al. (https://github.com/wjohnson/pyapacheatlas)
+The Table and Colums metadata are extracted via SQL queries whose source can be found in the MS documentation [here](https://learn.microsoft.com/en-us/sql/relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq?view=fabric#_FAQ31)
+- Report sources metadata Pipeline json structures are extracted using Semantic Link Labs library by Michael Kovalsky et al. [https://github.com/microsoft/semantic-link-labs](https://github.com/microsoft/semantic-link-labs)
+- Upload to MS Purview is performed using examples of Pyapacheatlas by Will Johnson et al. [https://github.com/wjohnson/pyapacheatlas](https://github.com/wjohnson/pyapacheatlas)
