@@ -38,11 +38,11 @@ In more detail, the provided notebook code accomplishes the following four tasks
 
 # Quickstart: How to run the code
 
-Download the notebook in this Github repo on a PC or VM, then import it into an MS Fabric workspace.
+Download the notebook in the Fabric-notebook folder to a PC or VM, then import it into an MS Fabric workspace.
 
 ![Import notebook](https://github.com/sdetoni-prj/Fabric_LineageExtractor/blob/main/media/import_notebook.png)
 
-If you already have a Service Principal created for MS Fabric and MS Purview, you just need to fill their IDs and secrets in the first cell of the notebook code. Check the Prerequisites and configuration section below to make sure the Fabric/PowerBI Admin portal settings are ok.
+If you already have Service Principal(s) created for MS Fabric and MS Purview, you just need to fill their IDs and secrets in the first cell of the notebook code. Check the Prerequisites and configuration section below to make sure the Fabric/PowerBI Admin portal settings are ok.
 
 Configure the second cell of the notebook with the following values (you can refer to the Prerequisites section for further details):
 
@@ -81,11 +81,11 @@ e.g. the SQL queries used to extract table and column metadata can be run from a
 
 <br />
 
-# Prerequisites and Fabric configuration
+# Prerequisites and Fabric configuration in more detail
 
 
 
-To use the source code, you need to:
+Here follows a more complete description of the configuration steps, for the general case:
 
 1. Create an Azure Service Principal in MS Entra ID (i.e register a single tenant Enterprise Application) following instructions in [this Quickstart](https://learn.microsoft.com/en-us/entra/identity-platform/quickstart-register-app). You do not need to add a redirect URI, but you need to [add a Client Secret](https://learn.microsoft.com/en-us/entra/identity-platform/how-to-add-credentials?tabs=client-secret#add-a-credential-to-your-application). Take note of the Tenant ID, the Service Principal Client ID and the Client Secret. Of course, you can reuse a Service Principal you already have. The source code provided allows you to use two different Service Principals, one for extracting metadata and lineage from Fabric, and a second one for uploading them into Purview. Using two Service principals may come useful when MS Purview and MS Fabric are in different EntraID Tenants.
 
