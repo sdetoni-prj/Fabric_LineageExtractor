@@ -38,7 +38,7 @@ In more detail, the provided notebook code accomplishes the following four tasks
 
 # Quickstart: How to run the code
 
-Download the notebook in the Fabric-notebook folder to a PC or VM, then import it into an MS Fabric workspace.
+Download the notebook in the [Fabric-notebook folder](https://github.com/sdetoni-prj/Fabric_LineageExtractor/tree/main/Fabric-notebook) to a PC or VM, then import it into an MS Fabric workspace.
 
 ![Import notebook](https://github.com/sdetoni-prj/Fabric_LineageExtractor/blob/main/media/import_notebook.png)
 
