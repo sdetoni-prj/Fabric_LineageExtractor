@@ -35,25 +35,18 @@ In more detail, the provided notebook code accomplishes the following four tasks
 
 <br />
 
-# Some output examples
-
-The first screenshot shows an example of the resulting column-level lineage display of Copy DataPipelines
-<img src="https://github.com/sdetoni-prj/Fabric_LineageExtractor/blob/main/media/example_output_1.png" alt="Pipeline lineage example" width="600">
-
-<br />
-
-The second screenshot shows column-level lineage display of Fabric/PowerBI reports in PBIR format.
-<img src="https://github.com/sdetoni-prj/Fabric_LineageExtractor/blob/main/media/example_output_2.png" alt="Report lineage example" width="600">
-
-<br />
 
 # Quickstart: How to run the code
 
 Download the notebook in this Github repo on a PC or VM, then import it into an MS Fabric workspace.
 
+![Import notebook](https://github.com/sdetoni-prj/Fabric_LineageExtractor/blob/main/media/import_notebook.png)
+
 If you already have a Service Principal created for MS Fabric and MS Purview, you just need to fill their IDs and secrets in the first cell of the notebook code. Check the Prerequisites and configuration section below to make sure the Fabric/PowerBI Admin portal settings are ok.
 
 Configure the second cell of the notebook with the following values (you can refer to the Prerequisites section for further details):
+
+![Authentication settings](https://github.com/sdetoni-prj/Fabric_LineageExtractor/blob/main/media/auth_settings.png)
 
 - **tenant_id** enter here the tenant_id of the Azure Tenant where Fabric is deployed
 
@@ -71,6 +64,9 @@ Configure the second cell of the notebook with the following values (you can ref
 fabric_SQL_connection_string get the value to be inserted here by clicking on the “ellipsis” (three dots icon) then “Copy SQL connection string” of either a Warehouse or the SQL analytics endpoint of a Lakehouse in the workspace that you want to extract metadata from.
 
 - **optional: demo_workspace** fill the name of a test workspace here if you want to first try the notebook code on only one specific workspace (you might need to uncomment a couple of lines of code in the cell extracting metadata)
+
+
+![Optional demo workspace](https://github.com/sdetoni-prj/Fabric_LineageExtractor/blob/main/media/demo_wkspace_code.png)
 
 - **optional: demo_workspace_id** the id of the demo_workspace where you want to give a first try of the code. Only this workspace will be explored for metadata extraction. 
 
@@ -103,12 +99,30 @@ To use the source code, you need to:
 4. Configure the EntraID Security Group you created:
     
 	- As a specific “enabled” Security Group in the  following settings of the PowerBI/Fabric Admin Portal (search for “API” in the top-right search textbox to easily find all the relevant settings):
+	
+![Admin portal security group](https://github.com/sdetoni-prj/Fabric_LineageExtractor/blob/main/media/admin_portal_1.png)
 
         * Within “Developer Settings”, the “Service principals can use Fabric APIs” setting (see screenshots)
     
         * Within “Admin API settings” the settings
             1. "Service principals can access read-only admin APIs"
             2. "Enhance admin APIs responses with detailed metadata"
+
+![Admin portal security group](https://github.com/sdetoni-prj/Fabric_LineageExtractor/blob/main/media/admin_portal_1.png)
+
+
+
+# Some output examples
+
+The first screenshot shows an example of the resulting column-level lineage display of Copy DataPipelines
+<img src="https://github.com/sdetoni-prj/Fabric_LineageExtractor/blob/main/media/example_output_1.png" alt="Pipeline lineage example" width="600">
+
+<br />
+
+The second screenshot shows column-level lineage display of Fabric/PowerBI reports in PBIR format.
+<img src="https://github.com/sdetoni-prj/Fabric_LineageExtractor/blob/main/media/example_output_2.png" alt="Report lineage example" width="600">
+
+<br />
 
 
 # Credits
