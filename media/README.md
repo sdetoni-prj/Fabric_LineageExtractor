@@ -40,9 +40,11 @@ In more detail, the provided notebook code accomplishes the following four tasks
 The first screenshot shows an example of the resulting column-level lineage display of Copy DataPipelines
 <img src="https://github.com/sdetoni-prj/Fabric_LineageExtractor/blob/main/media/example_output_1.png" alt="Pipeline lineage example" width="600">
 
+<br />
 
 The second screenshot shows column-level lineage display of Fabric/PowerBI reports in PBIR format.
-![Report lineage example](https://github.com/sdetoni-prj/Fabric_LineageExtractor/blob/main/media/example_output_2.png)
+<img src="https://github.com/sdetoni-prj/Fabric_LineageExtractor/blob/main/media/example_output_2.png" alt="Report lineage example" width="600">
+
 <br />
 
 # Quickstart: How to run the code
