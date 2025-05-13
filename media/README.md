@@ -108,6 +108,7 @@ To use the source code, you need to:
     - Within “Developer Settings”, the “Service principals can use Fabric APIs” setting (see screenshots)
     
     - Within “Admin API settings” the settings
+      
             1. "Service principals can access read-only admin APIs"
             2. "Enhance admin APIs responses with detailed metadata"
 
