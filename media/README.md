@@ -103,9 +103,9 @@ To use the source code, you need to:
 	
     ![Admin portal security group](https://github.com/sdetoni-prj/Fabric_LineageExtractor/blob/main/media/admin_portal1.png)
 
-        - in  “Service principals can use Fabric APIs” within “Developer Settings” (see screenshots)
+    - in  “Service principals can use Fabric APIs” within “Developer Settings” (see screenshots)
     
-        - in "Service principals can access read-only admin APIs" and "Enhance admin APIs responses with detailed metadata" within “Admin API settings”
+    - in "Service principals can access read-only admin APIs" and "Enhance admin APIs responses with detailed metadata" within “Admin API settings”
 
 ![Admin portal security group](https://github.com/sdetoni-prj/Fabric_LineageExtractor/blob/main/media/admin_portal2.png)
 
