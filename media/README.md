@@ -101,9 +101,9 @@ To use the source code, you need to:
 
 4. Configure the EntraID Security Group you created:
     
-	- As a specific “enabled” Security Group in the  following settings of the PowerBI/Fabric Admin Portal (search for “API” in the top-right search textbox to easily find all the relevant settings):
+    - As a specific “enabled” Security Group in the  following settings of the PowerBI/Fabric Admin Portal (search for “API” in the top-right search textbox to easily find all the relevant settings):
 	
-![Admin portal security group](https://github.com/sdetoni-prj/Fabric_LineageExtractor/blob/main/media/admin_portal1.png)
+    ![Admin portal security group](https://github.com/sdetoni-prj/Fabric_LineageExtractor/blob/main/media/admin_portal1.png)
 
     - Within “Developer Settings”, the “Service principals can use Fabric APIs” setting (see screenshots)
     
@@ -111,7 +111,7 @@ To use the source code, you need to:
             1. "Service principals can access read-only admin APIs"
             2. "Enhance admin APIs responses with detailed metadata"
 
-![Admin portal security group](https://github.com/sdetoni-prj/Fabric_LineageExtractor/blob/main/media/admin_portal2.png)
+    ![Admin portal security group](https://github.com/sdetoni-prj/Fabric_LineageExtractor/blob/main/media/admin_portal2.png)
 
 <br />
 
