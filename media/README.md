@@ -63,12 +63,13 @@ Configure the second cell of the notebook with the following values (you can ref
 - **PurviewAccount_name** insert here the name (not the ID) of the MS Purview Data Governance account
 fabric_SQL_connection_string get the value to be inserted here by clicking on the “ellipsis” (three dots icon) then “Copy SQL connection string” of either a Warehouse or the SQL analytics endpoint of a Lakehouse in the workspace that you want to extract metadata from.
 
-- **optional: demo_workspace** fill the name of a test workspace here if you want to first try the notebook code on only one specific workspace (you might need to uncomment a couple of lines of code in the cell extracting metadata)
-
+- **optional: demo_workspace** fill the name of a test workspace here if you want to first try the notebook code on only one specific workspace (you might need to uncomment a couple of lines of code in the cell extracting the metadata)
 
 ![Optional demo workspace](https://github.com/sdetoni-prj/Fabric_LineageExtractor/blob/main/media/demo_wkspace_code.png)
 
-- **optional: demo_workspace_id** the id of the demo_workspace where you want to give a first try of the code. Only this workspace will be explored for metadata extraction. 
+- **optional: demo_workspace_id** the id of the demo_workspace where you want to give a first try of the code. Only this workspace will be explored for metadata extraction.
+
+<br />
 
 Run the cells in the notebook one at a time to understand the way they work: the code is provided as a guideline and an example to create your own complex extraction mechanisms.
 
@@ -78,9 +79,11 @@ e.g. the SQL queries used to extract table and column metadata can be run from a
 
 **IMPORTANT NOTE:** to extract table and column metadata for data sources of PowerBI reports, the reports must be saved/imported into Fabric using the new PBIP/PBIR format, which can be enabled in PowerBI Desktop as [explained here](https://learn.microsoft.com/en-us/power-bi/developer/embedded/projects-enhanced-report-format)
 
+<br />
+
 # Prerequisites and Fabric configuration
 
-<br />
+
 
 To use the source code, you need to:
 
@@ -100,7 +103,7 @@ To use the source code, you need to:
     
 	- As a specific “enabled” Security Group in the  following settings of the PowerBI/Fabric Admin Portal (search for “API” in the top-right search textbox to easily find all the relevant settings):
 	
-![Admin portal security group](https://github.com/sdetoni-prj/Fabric_LineageExtractor/blob/main/media/admin_portal_1.png)
+![Admin portal security group](https://github.com/sdetoni-prj/Fabric_LineageExtractor/blob/main/media/admin_portal1.png)
 
         * Within “Developer Settings”, the “Service principals can use Fabric APIs” setting (see screenshots)
     
@@ -108,8 +111,9 @@ To use the source code, you need to:
             1. "Service principals can access read-only admin APIs"
             2. "Enhance admin APIs responses with detailed metadata"
 
-![Admin portal security group](https://github.com/sdetoni-prj/Fabric_LineageExtractor/blob/main/media/admin_portal_1.png)
+![Admin portal security group](https://github.com/sdetoni-prj/Fabric_LineageExtractor/blob/main/media/admin_portal2.png)
 
+<br />
 
 
 # Some output examples
