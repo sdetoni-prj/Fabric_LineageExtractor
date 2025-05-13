@@ -1,4 +1,4 @@
-# Automatic column-level Lineage Extraction from MS Fabric
+# Automatic Column-level Lineage Extraction from MS Fabric
 
 <br />
 
@@ -42,7 +42,7 @@ Download the notebook in the Fabric-notebook folder to a PC or VM, then import i
 
 ![Import notebook](https://github.com/sdetoni-prj/Fabric_LineageExtractor/blob/main/media/import_notebook.png)
 
-If you already have Service Principal(s) created for MS Fabric and MS Purview, you just need to fill their IDs and secrets in the first cell of the notebook code. Check the Prerequisites and configuration section below to make sure the Fabric/PowerBI Admin portal settings are ok.
+If you already have Service Principal(s) created for MS Fabric and MS Purview,, and you already enabled API access in the Fabric Admin Portal, then you just need to fill their IDs and secrets in the first cell of the notebook code. Check the section "Prerequisites and Fabric configuration in more detail" below to make sure the Fabric/PowerBI Admin portal settings are ok.
 
 Configure the second cell of the notebook with the following values (you can refer to the Prerequisites section for further details):
 
