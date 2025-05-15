@@ -21,9 +21,7 @@ In more detail, the provided notebook code accomplishes the following four tasks
 
 1. it sets up authentication and data structures in memory (initially empty dataframes) to store results
 
-2. it provides some examples of use of Semantic Link Lab, Scanner APIs, etc. to illustrate ways for extracting Fabric metadata
-
-3. it explores all workspaces accessible by the provided Fabric user/Service Principal, and it extracts:
+2. it explores all workspaces accessible by the provided Fabric user/Service Principal, and it extracts:
 
     - Tables with their columns (this uses a SQL query, therefore it can be performed also from a SQL client application external to Fabric)
 
@@ -31,7 +29,9 @@ In more detail, the provided notebook code accomplishes the following four tasks
 
     - Details of Copy pipelines with their column-level mappings (the source json is extracted via Semantic Labs lib)
 
-4. it eventually uploads all metadata into MS Purview Data Governance, and creates lineage links with column mappings for the discovered artifacts above
+3. it eventually uploads all metadata into MS Purview Data Governance, and creates lineage links with column mappings for the discovered artifacts above
+
+4. it provides some examples of use of Semantic Link Lab, Scanner APIs, etc. to illustrate ways for extracting Fabric metadata, also regarding reports with external data sources such as Azure Databricks
 
 <br />
 
@@ -109,6 +109,7 @@ Here follows a more complete description of the configuration steps, for the gen
 
 ![Admin portal security group](https://github.com/sdetoni-prj/Fabric_LineageExtractor/blob/main/media/admin_portal2.png)
 
+
 <br />
 
 
@@ -130,5 +131,5 @@ The second screenshot shows column-level lineage display of Fabric/PowerBI repor
 Version 1:
 
 The Table and Colums metadata are extracted via SQL queries whose source can be found in the MS documentation [here](https://learn.microsoft.com/en-us/sql/relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq?view=fabric#_FAQ31)
-- Report sources metadata Pipeline json structures are extracted using Semantic Link Labs library by Michael Kovalsky et al. [https://github.com/microsoft/semantic-link-labs](https://github.com/microsoft/semantic-link-labs)
+- Report sources metadata and pipeline json structures are extracted using the Semantic Link Labs library by Michael Kovalsky et al. [https://github.com/microsoft/semantic-link-labs](https://github.com/microsoft/semantic-link-labs)
 - Upload to MS Purview is performed using examples of Pyapacheatlas by Will Johnson et al. [https://github.com/wjohnson/pyapacheatlas](https://github.com/wjohnson/pyapacheatlas)
